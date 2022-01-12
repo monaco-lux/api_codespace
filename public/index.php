@@ -15,6 +15,8 @@ require __DIR__ . '/../routes/product.php';
 require __DIR__ . '/../routes/login.php';
 // wishlist route
 require __DIR__ . '/../routes/wishlist.php';
+// cart route
+require __DIR__ . '/../routes/cart.php';
 
 $app->run();
 
