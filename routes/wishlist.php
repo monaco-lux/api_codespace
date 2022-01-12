@@ -43,6 +43,7 @@ $app->post('/api/wishlist/add', function (Request $request, Response $response, 
     $product_id = $request->getParam('product_id');
     $user_id = $request->getParam('user_id');
 
+    // add stored procedure to limit to 20 additions per user id
     $sql = "INSERT INTO wishlist_endpoint (product_id,user_id) VALUES (:product_id, :user_id)";
 
     try
