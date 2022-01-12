@@ -42,8 +42,8 @@ $app->post('/api/cart/add', function (Request $request, Response $response, arra
     $product_id = $request->getParam('product_id');
     $user_id = $request->getParam('user_id');
 
-    $sql = "INSERT INTO cart_endpoint (product_id,user_id,add_remove) VALUES (:product_id, :user_id, 'add')";
-    // I have opted to use "Add" and "remove" wording so that db administrators can use the datbase for data reporting
+    $sql = "CALL cart_updater (:product_id, :user_id)";
+    // I have opted to use "Add" and "remove" wording so that db administrators can use the datbase for data handling
 
     try
     {
