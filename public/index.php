@@ -5,11 +5,14 @@ use Slim\Factory\AppFactory;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$app = Appfactory::create();
+$app = AppFactory::create();
 
-$app->get('/', function(Request $request, Response $response){
-  $response->getbody()->write("hello world");
-  return $response;
+$app->get('/hello/{name}', function (Request $request, Response $response, array $args) {
+    $name = $args['name'];
+    $response->getBody()->write("Hello, $name");
+    return $response;
 });
+
+$app->run();
 
  ?>
