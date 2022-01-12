@@ -13,6 +13,8 @@ $app = AppFactory::create();
 require __DIR__ . '/../routes/product.php';
 // login route
 require __DIR__ . '/../routes/login.php';
+// wishlist route
+require __DIR__ . '/../routes/wishlist.php';
 
 $app->run();
 

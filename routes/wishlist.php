@@ -100,4 +100,10 @@ $app->delete('/api/wishlist/delete/[{id}[/{productid}]]', function (Request $req
     }
 });
 
+/* Note for people reading my commit: I originally created this project
+under the heading "online_store_backend", which is on my github, however
+I managed to mess up the connection and I wasn't able to restore it. The code
+above is from that project. I am merely restoring it here as it now works.
+*/
+
  ?>
