@@ -19,6 +19,7 @@ require __DIR__ . '/../routes/wishlist.php';
 // categories route
 require __DIR__ . '/../routes/categories.php';
 
+
 $app->run();
 
  ?>
