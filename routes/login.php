@@ -5,13 +5,17 @@ use Slim\Factory\AppFactory;
 
 $app = AppFactory::create();
 
-/ single entry only
+// single entry only
 
 $app->get('/api/login/[{username}[/{password}[/{token}]]]', function (Request $request, Response $response, array $args) {
     $username = $args['username'];
     $password = $args['password'];
     $token = $args['token'];
     $sql = "SELECT * FROM login_endpoint WHERE username = '$username' and password = '$password' and token = '$token'";
+    // intention of the above is that if the username, password and token are correct it will return values.
+    // with the returned values an if statement can be used to check whether or not a true value is returned
+    // if true user will be logged in
+
 
     try
     {
