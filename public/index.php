@@ -11,6 +11,8 @@ $app = AppFactory::create();
 
 // product route
 require __DIR__ . '/../routes/product.php';
+// login route
+require __DIR__ . '/../routes/login.php';
 
 $app->run();
 
