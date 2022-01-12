@@ -43,6 +43,7 @@ $app->post('/api/cart/add', function (Request $request, Response $response, arra
     $user_id = $request->getParam('user_id');
 
     $sql = "INSERT INTO cart_endpoint (product_id,user_id,add_remove) VALUES (:product_id, :user_id, 'add')";
+    // I have opted to use "Add" and "remove" wording so that db administrators can use the datbase for data reporting
 
     try
     {
