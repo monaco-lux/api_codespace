@@ -9,11 +9,8 @@ require __DIR__ . '/../config/db.php';
 
 $app = AppFactory::create();
 
-$app->get('/hello/{name}', function (Request $request, Response $response, array $args) {
-    $name = $args['name'];
-    $response->getBody()->write("Hello, $name");
-    return $response;
-});
+// product route
+require __DIR__ . '/../routes/product.php';
 
 $app->run();
 
