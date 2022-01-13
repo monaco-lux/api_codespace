@@ -72,10 +72,10 @@ $app->post('/api/cart/add', function (Request $request, Response $response, arra
 });
 
 // remove cart item
-$app->patch('/api/cart/patch/[{product_id}[/{user_id}]]', function (Request $request, Response $response, array $args) {
+$app->delete('/api/cart/patch/[{product_id}[/{user_id}]]', function (Request $request, Response $response, array $args) {
     $product_id = $args['product_id'];
     $user_id = $args['user_id'];
-    $sql = "UPDATE cart_endpoint SET add_remove = 'remove' WHERE product_id = $product_id and user_id = $user_id";
+    $sql = "DELETE FROM cart_endpoint WHERE product_id = $product_id and user_id = $user_id";
 
     try
     {
