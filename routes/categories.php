@@ -3,7 +3,7 @@ use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\Factory\AppFactory;
 
-$app = AppFactory::create();
+//$app = AppFactory::create();
 
 // code to get all categories
 $app->get('/api/categories/all', function (Request $request, Response $response) {
